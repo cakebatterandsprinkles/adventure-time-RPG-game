@@ -1,0 +1,19 @@
+body {
+    background-image: url("../assets/images/adventuretime-bg.jpg");
+}
+
+img {
+    max-width: 100px;
+    width:100%;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.characters {
+    background-color: rgba(214, 214, 214, 0.829);
+    border-radius: 10px;
+}
+
+h1 {
+    font-weight:900;
+    text-shadow: 2px 2px 5px #7a7a7a;
+}
