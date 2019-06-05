@@ -21,21 +21,40 @@
         </div>
         <div class="row justify-content-center">
             <div class="characters p-3">
-                <button type="button" class="btn btn-lg " id="jakeImage"><img src="assets/images/jake.jpg"
-                        class="image-thumbnail" alt="Jake's image"></button>
-                <button type="button" class="btn btn-lg " id="finnImage"><img src="assets/images/finn.jpg"
-                        class="image-thumbnail" alt="Finn's image"></button>
-                <button type="button" class="btn btn-lg " id="pbgImage"><img src="assets/images/pbg.jpg"
-                        class="image-thumbnail" alt="PBG's image"></button>
-                <button type="button" class="btn btn-lg " id="iceKingImage"><img src="assets/images/iceking.jpg"
-                        class="image-thumbnail" alt="Ice King's image"></button>
-                <button type="button" class="btn btn-lg " id="marcyImage"><img src="assets/images/marcy.jpg"
-                        class="image-thumbnail" alt="Marceline's image"></button>
-                <button type="button" class="btn btn-lg " id="bmoImage"><img src="assets/images/bmo.jpg"
-                        class="image-thumbnail" alt="BMO's image"></button>
-                <button type="button" class="btn btn-lg " id="lspImage"><img src="assets/images/lsp.jpg"
-                        class="image-thumbnail" alt="LSP's image"></button>
+                <button type="button" class="btn btn-lg " id="jakeImage" value="200"><p>Jake</p><img src="assets/images/jake.jpg"
+                        class="image-thumbnail" alt="Jake's image"><p class="mt-3 health">200</p></button>
+                <button type="button" class="btn btn-lg " id="finnImage" value="220"><p>Finn</p><img src="assets/images/finn.jpg"
+                        class="image-thumbnail" alt="Finn's image"><p class="mt-3 health">220</p></button>
+                <button type="button" class="btn btn-lg " id="pbgImage" value="180"><p>PBG</p><img src="assets/images/pbg.jpg"
+                        class="image-thumbnail" alt="PBG's image"><p class="mt-3 health">180</p></button>
+                <button type="button" class="btn btn-lg " id="iceKingImage" value="200"><p>Ice King</p><img src="assets/images/iceking.jpg"
+                        class="image-thumbnail" alt="Ice King's image"><p class="mt-3 health">200</p></button>
+                <button type="button" class="btn btn-lg " id="marcyImage" value="250"><p>Marceline</p><img src="assets/images/marcy.jpg"
+                        class="image-thumbnail" alt="Marceline's image"><p class="mt-3 health">250</p></button>
+                <button type="button" class="btn btn-lg " id="bmoImage" value="100"><p>BMO</p><img src="assets/images/bmo.jpg"
+                        class="image-thumbnail" alt="BMO's image"><p class="mt-3 health">100</p></button>
+                <button type="button" class="btn btn-lg " id="lspImage" value="120"><p>LSP</p><img src="assets/images/lsp.jpg"
+                        class="image-thumbnail" alt="LSP's image"><p class="mt-3 health">120</p></button>
             </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-3 text-center userCharacter m-3 p-1 lead">
+                <p> Your Character: </p>
+                <hr>
+            </div>
+            <div class="col-2 text-center m-3 fight p-1 lead">
+                    <p> Fight: </p>
+                    <hr>
+                    <button type="button" class="btn btn-lg text-white bg-warning mb-3" id="attackButton" >Attack</button>
+                    <button type="button" class="btn btn-lg text-white bg-success" id="resetButton">Reset Game</button>
+                    <p class="mt-4">Wins: <span class="winsDisplay">0</span></p>
+                    <p>Losses: <span class="lossesDisplay">0</span></p>
+                </div>
+            <div class="col-3 text-center defender m-3 p-1 lead">
+                <p> Defender: </p>
+                <hr>
+            </div>
+
         </div>
     </div>
 
