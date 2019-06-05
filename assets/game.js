@@ -57,7 +57,12 @@ $(document).ready(function () {
         defenderHealth -= attackPoint;
         $(".defender .health").text(defenderHealth);
         checkScore();
+    })
 
+    $("#changeCharactersButton").on("click", function(){
+        changeCharacters();
+        fighterIsSelected = false;
+        defenderIsSelected = false;
     })
 
     function chooseCharacters() {
@@ -91,6 +96,7 @@ $(document).ready(function () {
         $(".lossesDisplay").text(losses);
         attackPoint = 0;
         defendPoint = 0;
+        changeCharacters();
     }
 
     function createAttackPoint() {
@@ -111,22 +117,40 @@ $(document).ready(function () {
         if (attackerHealth > 0 &&  defenderHealth <= 0) {
             wins++;
             $(".winsDisplay").text(wins);
+            attackerHealth = parseInt(attackCharacter.val());
+            $(".userCharacter .health").text(attackerHealth);
+            defenderHealth = parseInt(defendCharacter.val());
+            $(".defender .health").text(defenderHealth);
+            alert ("You are lumpin' awesome!")
             checkWin();
         } else if (defenderHealth > 0 && attackerHealth <= 0){
             losses++;
             $(".lossesDisplay").text(losses);
+            attackerHealth = parseInt(attackCharacter.val());
+            $(".userCharacter .health").text(attackerHealth);
+            defenderHealth = parseInt(defendCharacter.val());
+            $(".defender .health").text(defenderHealth);
+            alert ("No bad vibes! Keep on.")
             checkWin();
         }
     }
 
-    
+    function changeCharacters() {
+        defenderHealth = parseInt(defendCharacter.val());
+        $(".defender .health").text(defenderHealth);
+        defendCharacter.appendTo(".characters");
+        attackerHealth = parseInt(attackCharacter.val());
+        $(".userCharacter .health").text(attackerHealth);
+        attackCharacter.appendTo(".characters");
+
+    }
 
     function checkWin() {
         if (wins === 10 && losses < 10) {
-            alert("You won!");
+            alert("Congrats! You know, that if your parents could see you now, they'd be jealous of how lumpin' awesome you are.");
             resetGame();
         } else if (wins < 10 && losses === 10) {
-            alert("You lost!");
+            alert("You lost! But you know, if you get everything you want the minute you want it, what's the point of living?");
             resetGame();
         }
     }

@@ -17,3 +17,7 @@ h1 {
     font-weight:900;
     text-shadow: 2px 2px 5px #7a7a7a;
 }
+
+.gameButtons {
+    box-shadow: 3px 3px 3px #aaaaaa;
+}
