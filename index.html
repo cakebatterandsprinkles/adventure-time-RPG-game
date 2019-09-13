@@ -1,76 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Adventure Time Fan Game</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Adventure Time Fan Game</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/style.css">
 
-    <!-- Background-image was taken from : https://wall.alphacoders.com/big.php?i=442432 -->
-    <!-- Character images were taken from: https://www.deviantart.com/biscuitatus/art/Adventure-Time-Portrait-Series-608559979 -->
+        <!-- Background-image was taken from : https://wall.alphacoders.com/big.php?i=442432 -->
+        <!-- Character images were taken from: https://www.deviantart.com/biscuitatus/art/Adventure-Time-Portrait-Series-608559979 -->
 
-</head>
+    </head>
 
-<body>
-    <div class="container">
-        <div class="row justify-content-center p-3 m-3">
-            <h1 class="display-4 text-white">Adventure Time Fan Game</h1>
-        </div>
-        <div class="row justify-content-center">
-            <div class="characters p-3">
-                <button type="button" class="btn btn-lg " id="jakeImage" value="200"><p>Jake</p><img src="assets/images/jake.jpg"
-                        class="image-thumbnail" alt="Jake's image"><p class="mt-3 health">200</p></button>
-                <button type="button" class="btn btn-lg " id="finnImage" value="220"><p>Finn</p><img src="assets/images/finn.jpg"
-                        class="image-thumbnail" alt="Finn's image"><p class="mt-3 health">220</p></button>
-                <button type="button" class="btn btn-lg " id="pbgImage" value="180"><p>PBG</p><img src="assets/images/pbg.jpg"
-                        class="image-thumbnail" alt="PBG's image"><p class="mt-3 health">220</p></button>
-                <button type="button" class="btn btn-lg " id="iceKingImage" value="200"><p>Ice King</p><img src="assets/images/iceking.jpg"
-                        class="image-thumbnail" alt="Ice King's image"><p class="mt-3 health">210</p></button>
-                <button type="button" class="btn btn-lg " id="marcyImage" value="250"><p>Marceline</p><img src="assets/images/marcy.jpg"
-                        class="image-thumbnail" alt="Marceline's image"><p class="mt-3 health">230</p></button>
-                <button type="button" class="btn btn-lg " id="bmoImage" value="100"><p>BMO</p><img src="assets/images/bmo.jpg"
-                        class="image-thumbnail" alt="BMO's image"><p class="mt-3 health">180</p></button>
-                <button type="button" class="btn btn-lg " id="lspImage" value="120"><p>LSP</p><img src="assets/images/lsp.jpg"
-                        class="image-thumbnail" alt="LSP's image"><p class="mt-3 health">200</p></button>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center p-3 m-3">
+                <h1 class="display-4 text-white">Adventure Time Fan Game</h1>
             </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-3 text-center userCharacter m-3 p-1 lead">
-                <p> Your Character: </p>
-                <hr>
-            </div>
-            <div class=" col-2 text-center m-3 fight p-1 lead">
-                    <p> Fight: </p>
-                    <hr>
-                    <button type="button" class="btn btn-md text-white bg-warning mb-3 gameButtons" id="attackButton" >Attack</button>
-                    <button type="button" class="btn btn-md text-white bg-success mb-3 gameButtons" id="resetButton">Reset Game</button>
-                    <button type="button" class="btn btn-md text-white bg-info p-1 gameButtons" id="changeCharactersButton">Change Characters</button>
-                    <p class="mt-4">Wins: <span class="winsDisplay">0</span></p>
-                    <p>Losses: <span class="lossesDisplay">0</span></p>
+            <div class="row justify-content-center">
+                <div class="characters p-3">
+                    <button type="button" class="btn btn-lg " id="jakeImage" value="200">
+                        <p>Jake</p><img src="assets/images/jake.jpg" class="image-thumbnail" alt="Jake's image">
+                        <p class="mt-3 health">200</p>
+                    </button>
+                    <button type="button" class="btn btn-lg " id="finnImage" value="220">
+                        <p>Finn</p><img src="assets/images/finn.jpg" class="image-thumbnail" alt="Finn's image">
+                        <p class="mt-3 health">220</p>
+                    </button>
+                    <button type="button" class="btn btn-lg " id="pbgImage" value="180">
+                        <p>PBG</p><img src="assets/images/pbg.jpg" class="image-thumbnail" alt="PBG's image">
+                        <p class="mt-3 health">220</p>
+                    </button>
+                    <button type="button" class="btn btn-lg " id="iceKingImage" value="200">
+                        <p>Ice King</p><img
+                            src="assets/images/iceking.jpg"
+                            class="image-thumbnail"
+                            alt="Ice King's image">
+                        <p class="mt-3 health">210</p>
+                    </button>
+                    <button type="button" class="btn btn-lg " id="marcyImage" value="250">
+                        <p>Marceline</p><img
+                            src="assets/images/marcy.jpg"
+                            class="image-thumbnail"
+                            alt="Marceline's image">
+                        <p class="mt-3 health">230</p>
+                    </button>
+                    <button type="button" class="btn btn-lg " id="bmoImage" value="100">
+                        <p>BMO</p><img src="assets/images/bmo.jpg" class="image-thumbnail" alt="BMO's image">
+                        <p class="mt-3 health">180</p>
+                    </button>
+                    <button type="button" class="btn btn-lg " id="lspImage" value="120">
+                        <p>LSP</p><img src="assets/images/lsp.jpg" class="image-thumbnail" alt="LSP's image">
+                        <p class="mt-3 health">200</p>
+                    </button>
                 </div>
-            <div class="col-3 text-center defender m-3 p-1 lead">
-                <p> Defender: </p>
-                <hr>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-3 text-center userCharacter m-3 p-1 lead">
+                    <p>
+                        Your Character:
+                    </p>
+                    <hr>
+                </div>
+                <div class=" col-2 text-center m-3 fight p-1 lead">
+                    <p>
+                        Fight:
+                    </p>
+                    <hr>
+                    <button
+                        type="button"
+                        class="btn btn-md text-white bg-warning mb-3 gameButtons"
+                        id="attackButton">Attack</button>
+                    <button
+                        type="button"
+                        class="btn btn-md text-white bg-success mb-3 gameButtons"
+                        id="resetButton">Reset Game</button>
+                    <button
+                        type="button"
+                        class="btn btn-md text-white bg-info p-1 gameButtons"
+                        id="changeCharactersButton">Change Characters</button>
+                    <p class="mt-4">Wins:
+                        <span class="winsDisplay">0</span>
+                    </p>
+                    <p>Losses:
+                        <span class="lossesDisplay">0</span>
+                    </p>
+                </div>
+                <div class="col-3 text-center defender m-3 p-1 lead">
+                    <p>
+                        Defender:
+                    </p>
+                    <hr>
+                </div>
             </div>
         </div>
-    </div>
 
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="assets/game.js"></script>
-</body>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="assets/game.js"></script>
+    </body>
 
 </html>
